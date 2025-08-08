@@ -16,6 +16,8 @@ import { NouvelleCmdCltFrs } from './composant/nouvelle-cmd-clt-frs/nouvelle-cmd
 import { PageCategories } from './pages/categories/page-categories/page-categories';
 import { NouvelleCategory } from './pages/categories/nouvelle-category/nouvelle-category';
 import { PageUtilisateur } from './pages/page-utilisateur/page-utilisateur';
+import { PageProfil } from './pages/profil/page-profil/page-profil';
+import { ChangerMotDePasse } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe';
 
 const routes: Routes = [
   {
@@ -92,6 +94,14 @@ const routes: Routes = [
       {
         path:'nouvelUtilisateur',
         component:NouvelUtilisateur
+      },
+       {
+        path:'profil',
+        component:PageProfil
+      },
+       {
+        path:'changermotdepasse',
+        component:ChangerMotDePasse
       }
       
       
