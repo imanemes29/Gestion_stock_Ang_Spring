@@ -1,5 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boutton-action',
@@ -8,6 +7,13 @@ import { Router } from '@angular/router';
   styleUrl: './boutton-action.scss'
 })
 export class BouttonAction  implements OnInit{
+
+    @Input()
+  isNouveauVisible= true ;
+    @Input()
+  isExporterVisible = true ;
+    @Input()
+  isImporterVisible = true ;
 
   @Output() // c envoyer un elm du composant fils au composant parent
   clickEvent=new EventEmitter();

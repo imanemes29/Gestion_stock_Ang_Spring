@@ -15,6 +15,6 @@ export class PageClient implements OnInit{
 constructor(private router: Router) {}
 
   nouveauClient():void{
-this.router.navigate(['/nouveauClient']);
+this.router.navigate(['nouveauClient']);
   }
 }

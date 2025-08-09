@@ -114,14 +114,27 @@ export class Menu implements OnInit {
 
 
   ];
+
+  private lastSelectedMenu: MenuOb | undefined;
+  active: boolean | undefined;
+
   ngOnInit(): void {
 
   }
   constructor(private router: Router
   ) { }
 
-  navigate(url?: string): void {
-    this.router.navigate([url]);
+  // navigate(url?: string): void {
+  //   this.router.navigate([url]);
+  // }
+
+  navigate(menu:MenuOb):void {
+    if(this.lastSelectedMenu){
+      this.lastSelectedMenu.active = false
+    }
+    menu.active=true;
+     this.lastSelectedMenu=menu;
+    this.router.navigate([menu.url]);
   }
 
 }

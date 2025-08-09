@@ -16,6 +16,6 @@ export class PageArticle implements OnInit {
       
   }
   NouvelArticle(){
-    this.router.navigate(['nouvelarticle'])
+    this.router.navigate(['/nouvelarticle'])
     }
 }

@@ -2,11 +2,11 @@
   <!-- Titre + boutons -->
   <div class="row m-3">
     <div class="col-md-8 p-0">
-      <h2>Commandes clients /fournisseurs</h2>
+      <h2>Commandes {{origin}} </h2>
     </div>
     <div class="col-md-4 text-end">
-      <app-boutton-action>
-        (clickEvent)="nouvelleCommande()"
+      <app-boutton-action   (clickEvent)="nouvelleCommande()"
+       [isImporterVisible]="false"                             >
       </app-boutton-action>
     </div>
   </div>
